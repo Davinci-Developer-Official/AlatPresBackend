@@ -1,0 +1,24 @@
+{
+  "name": "alatpresbackend",
+  "version": "1.0.0",
+  "description": "Official AlatPres Backend testing platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Davinci-Developer-Official/AlatPresBackend.git"
+  },
+  "keywords": [
+    "API",
+    "AWS",
+    "NODE"
+  ],
+  "author": "Thomas Mithamo alias (Davinci Developer)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Davinci-Developer-Official/AlatPresBackend/issues"
+  },
+  "homepage": "https://github.com/Davinci-Developer-Official/AlatPresBackend#readme"
+}
