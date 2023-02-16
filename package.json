@@ -1,10 +1,14 @@
 {
-  "name": "alatpresbackend",
+  "name": "alatpres server",
   "version": "1.0.0",
   "description": "Official AlatPres Backend testing platform",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon ./index.js",
+    "alerts": "nodemon ./Apis/Alertsapi/alerts.js",
+    "providers": "nodemon /Apis/Providersapi/provider.js",
+    "reports": "nodemon /Apis/Reportsapi/Report.js",
+    "rgroups": "nodemon /Apis/Responsegroupsapi/resGroups.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +24,12 @@
   "bugs": {
     "url": "https://github.com/Davinci-Developer-Official/AlatPresBackend/issues"
   },
-  "homepage": "https://github.com/Davinci-Developer-Official/AlatPresBackend#readme"
+  "homepage": "https://github.com/Davinci-Developer-Official/AlatPresBackend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20",
+    "pg": "^8.9.0",
+    "socket.io": "^4.6.0"
+  }
 }
