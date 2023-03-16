@@ -6,9 +6,11 @@
   "scripts": {
     "start": "nodemon ./index.js",
     "alerts": "nodemon ./Apis/Alertsapi/alerts.js",
-    "providers": "nodemon /Apis/Providersapi/provider.js",
-    "reports": "nodemon /Apis/Reportsapi/Report.js",
-    "rgroups": "nodemon /Apis/Responsegroupsapi/resGroups.js"
+    "providers": "nodemon ./Apis/Providersapi/provider.js",
+    "reports": "nodemon ./Apis/Reportsapi/Report.js",
+    "rgroups": "nodemon ./Apis/Responsegroupsapi/resGroups.js",
+    "users": "nodemon ./Apis/Users/users.js",
+    "main": "nodemon ./Apis/main.js"
   },
   "repository": {
     "type": "git",
@@ -27,8 +29,12 @@
   "homepage": "https://github.com/Davinci-Developer-Official/AlatPresBackend#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "helmet": "^6.0.1",
+    "joi": "^17.7.1",
     "nodemon": "^2.0.20",
+    "pem": "^1.14.6",
     "pg": "^8.9.0",
     "socket.io": "^4.6.0"
   }
