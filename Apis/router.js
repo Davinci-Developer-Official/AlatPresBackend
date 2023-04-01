@@ -1,7 +1,8 @@
 const {Router}= require("express")
 const router = new Router();
 const Logic = require("./operator")
-const pool = require("./connection/db")
+//const pool = require("./connection/db")
+
 
 
 //alerts
@@ -15,11 +16,20 @@ router.delete('/alerts/:id',Logic.deleteAlertById)
 
 //providers
 router.get("/providers",Logic.getAllProvider)
+router.get("/providers/:id",Logic.getResponseProvidersById)
+router.post("/providers",Logic.createNewResponseProvider)
+router.delete("/providers",Logic.deleteAllResponseProviders)
+router.delete('/providers/:id',Logic.deleteResponseProviderById)
 
 
 
 //Reports
 router.get("/reports",Logic.getAllReports)
+router.get("/reports/:id",Logic.getReportById)
+router.post("/reports",Logic.newReport)
+router.delete("/reports/:id",Logic.deleteReportById)
+router.delete("/reports",Logic.deleteAllReports);
+
 
 
 //response groups
@@ -30,9 +40,17 @@ router.delete("/resgroup/:id",Logic.deleteResponseGroupById)
 
 //members
 router.get("/members",Logic.getAllMembers)
+router.get('/members/:id',Logic.getMemberById)
+router.post('/members',Logic.createNewMember)
+router.delete('/members',Logic.deleteAllMembers)
+router.delete('/members/:id',Logic.deletememberById)
 
 //Users
 router.get("/users",Logic.getAllUsers)
+router.get('/users/:id',Logic.getUserById)
+router.post('/users',Logic.createNewUser)
+router.delete('/users',Logic.deleteAllUsers)
+router.delete('/users/:id',Logic.deleteUserById)
 
 
 module.exports={router}

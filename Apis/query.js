@@ -8,7 +8,7 @@
 /* Alerts end */
 
 /* response groups start */
-    const newResGroups ="INSERT INTO resgroups(groupname,grouppurpose,groupcategory,grouptuuid ) VALUES($1,$2,$3,$4) ";
+    const newResGroups ="INSERT INTO resgroups( groupname,grouppurpose,groupdescription,groupcategory,groupuuid) VALUES($1,$2,$3,$4,$5) ";
     const allResGroups = "SELECT * FROM resgroups"
     const getRespGroupById="SELECT * FROM resgroups WHERE id = $1"
     const deleteAllResponseGroups="DELETE FROM resgroups";
@@ -24,7 +24,11 @@ const deleteProviderById="DELETE FROM resproviders WHERE id = $1 ";
 /* response providers end */
 
 /*reports start */
-const newReport ="";
+const newReport ="INSERT INTO reports(title,topic,source,body,authors,reportuuid) VALUES($1,$2,$3,$4,$5,$6)";
+const getAllReports ="SELECT * FROM reports"
+const getReportsById ="SELECT * FROM reports WHERE id = $1 ";
+const deleteAllReports="DELETE FROM reports";
+const deleteReportById="DELETE FROM reports WHERE id = $1";
 /* reports groups end */
 
 /* Members start */
@@ -67,6 +71,10 @@ module.exports={
 
     //reports
     newReport,
+    getAllReports,
+    getReportsById,
+    deleteAllReports,
+    deleteReportById,
 
     //member
     newMember,
