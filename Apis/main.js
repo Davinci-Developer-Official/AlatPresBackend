@@ -27,6 +27,19 @@ app.use((req, res, next) => {
   }
 });
 
+app.get('/',(req,res)=>{
+  res.status(200)
+  .send(`Welcome to alatpres Api center  `)
+  console.log(`${time.generateTime()}`)
+})
+
+app.get('/api',(req,res)=>{
+  res.status(200)
+  .send(`Welcome to alatpres Api center  `)
+  console.log(`${time.generateTime()}`)
+})
+
+
 /*Sockets */
 io.on('connection',(socket)=>{
  console.log(socket.id)
@@ -47,11 +60,6 @@ io.on('connection',(socket)=>{
 /*sockets */
 
 
-app.get('/api',(req,res)=>{
-  res.status(200)
-  .send(`Welcome to alatpres Api center  `)
-  console.log(`${time.generateTime()}`)
-})
 
 
 
