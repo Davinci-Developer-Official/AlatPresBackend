@@ -51,6 +51,13 @@ io.on('connection',(socket)=>{
     console.log(`${args}`)
     io.emit("statusgroups",args)
   })
+  socket.on("isRegistered",()=>{
+    const registered= ""
+    if(registered.trim().length==0){
+      io.emit("isRegistered","true")
+    }
+
+  })
   //diconnecting
   socket.on("disconnect",(msg)=>{
     console.log("you have disconnected"+msg)
@@ -69,7 +76,7 @@ io.on('connection',(socket)=>{
 //const secureSSl= https.createServer({
 //  key: fs.readFileSync(path.join(__dirname,"./certificates/key.pem")),
 //  cert:fs.readFileSync(path.join(__dirname,"./certificates/cert.pem")),
-//},app)
+//app)
 //secureSSl.listen(conn.port,()=>console.log(`server is on localhost ${conn.port} `))
 
 //listen to port
